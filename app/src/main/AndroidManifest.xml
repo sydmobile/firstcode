@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.firstCode">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:name="com.example.firstcode.MyApplication"
         android:allowBackup="false"
@@ -13,20 +12,78 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.example.firstcode.ninth.HttpRequestActivity"></activity>
+        <activity android:name="com.example.firstcode.ninth.WebViewActivity" />
         <activity
             android:name="com.example.firstcode.MainActivity"
             android:label="first_code">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name="com.example.firstcode.third_chapter.UIActivity" />
         <activity android:name="com.example.firstcode.third_chapter.FrameLayoutActivity" />
         <activity android:name="com.example.firstcode.third_chapter.ListIViewActivity" />
+        <activity android:name="com.example.firstcode.third_chapter.RecyclerViewActivity" />
+        <activity android:name="com.example.firstcode.third_chapter.MsgActivity" />
+        <activity android:name="com.example.firstcode.fourth_chapter.FragmentBaseActivity" />
+        <activity android:name="com.example.firstcode.fourth_chapter.news.NewsContentActivity" />
+        <activity android:name="com.example.firstcode.fourth_chapter.news.ActivityNews" />
+        <activity android:name="com.example.firstcode.fifth_chapter.NetChangeActivity" />
+        <activity android:name="com.example.firstcode.fifth_chapter.bestpractice.LoginActivity" />
+        <activity android:name="com.example.firstcode.fifth_chapter.bestpractice.SuccessActivity" />
+        <activity android:name="com.example.firstcode.sixth_chapter.FileSaveActivity" />
+        <activity android:name="com.example.firstcode.sixth_chapter.db.DBDemoActivity" />
+        <activity android:name="com.example.firstcode.seventh_chapter.permission.PermissionActivity" />
+        <activity android:name="com.example.firstcode.seventh_chapter.contacts.ContactsActivity" />
+        <activity android:name="com.example.firstcode.eighth_chapter.NotificationActivity" />
+        <activity android:name="com.example.firstcode.eighth_chapter.MediaActivity" />
+        <activity android:name="com.example.firstcode.ninth.XmlParseActivity" />
+        <activity android:name="com.example.firstcode.test.TestActivity" />
+
+        <provider
+            android:name="com.example.firstcode.seventh_chapter.demo.MyContentProvider"
+            android:authorities="com.syd.xx"
+            android:enabled="true"
+            android:exported="true" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.firstcode"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver
+            android:name="com.example.firstcode.eighth_chapter.MyReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name="com.example.firstcode.fifth_chapter.norboardcast.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="com.my_broadcast.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.example.firstcode.fifth_chapter.bootreceiver.BootCompleteReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

@@ -32,6 +32,18 @@
             android:layout_height="wrap_content"
             android:text="ListView"
             android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/bt_recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView"
+            android:textAllCaps="false"/>
     </LinearLayout>
+    <Button
+        android:id="@+id/bt_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="聊天页面"
+        android:textAllCaps="false"/>
 
 </LinearLayout>

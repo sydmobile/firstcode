@@ -1,11 +1,14 @@
 package com.example.firstcode;
 
 import android.app.Application;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.firstCode.R;
+
+import org.litepal.LitePal;
 
 /**
  * 说明：$
@@ -21,6 +24,8 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         myApplication = this;
+        LitePal.initialize(this);
+        Log.e("myapplication","oncreate()");
     }
 
     public static MyApplication getInstance(){

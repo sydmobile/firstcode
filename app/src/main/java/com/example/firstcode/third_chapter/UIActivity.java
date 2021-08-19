@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -47,6 +48,10 @@ public class UIActivity extends AppCompatActivity implements View.OnClickListene
         btProgressDialog.setOnClickListener(this);
         Button btListView = findViewById(R.id.bt_listview);
         btListView.setOnClickListener(this);
+        Button btRecyclerView = findViewById(R.id.bt_recycler_view);
+        btRecyclerView.setOnClickListener(this);
+        Button btChat = findViewById(R.id.bt_chat);
+        btChat.setOnClickListener(this);
     }
 
     @Override
@@ -64,10 +69,29 @@ public class UIActivity extends AppCompatActivity implements View.OnClickListene
             case R.id.bt_listview:
                 ListIViewActivity.actionStart(this);
                 break;
+            case R.id.bt_recycler_view:
+                Intent intent = new Intent(this,RecyclerViewActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.bt_chat:
+                Intent intent1 = new Intent(this,MsgActivity.class);
+                startActivity(intent1);
+                break;
 
         }
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e("onpause","=");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.e("stop","==");
+    }
 
     /**
      * AlertDialog 学习

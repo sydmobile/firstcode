@@ -2,8 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/ll"
     android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardElevation="8dp"
+        android:focusable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你好啊啊啊啊"
+            android:textSize="20sp"/>
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,6 +38,164 @@
             android:text="基础UI控件使用"/>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:text="第四章内容练习"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragment使用"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/bt_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="news"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:text="第五章内容练习"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_net_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网络监听"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/bt_offline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="被迫下线实践"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/colorAccent"
+    android:textSize="20sp"
+    android:text="第六章练习内容"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数据持久化"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/bt_db"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数据库"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:text="第七章练习内容"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_permission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运行时权限"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/bt_read_contracts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="读取联系人"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:text="第八章练习内容"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通知功能"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/bt_take_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="多媒体"
+            android:textAllCaps="false" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:text="第九章练习内容--网络"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_wb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WebView"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/bt_http_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Http 请求"
+            android:textAllCaps="false" />
+        <Button
+            android:id="@+id/bt_xml_pares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xml 解析"
+            android:textAllCaps="false" />
+    </LinearLayout>
+    <Button
+        android:text="测试"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt"/>
+
+
 
 
 </LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<litepa>
+    <dbname value = "bookdemo"></dbname>
+    <version value = "2"></version>
+    <list>
+        <mapping class="com.example.firstcode.sixth_chapter.db.litepal.Book"></mapping>
+        <mapping class="com.example.firstcode.sixth_chapter.db.litepal.Category"></mapping>
+        <mapping class="com.example.firstcode.sixth_chapter.db.litepal.BookStore"></mapping>
+    </list>
+    <storage value="external" />
+</litepa>
